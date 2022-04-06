@@ -1,10 +1,9 @@
-package negocio;
+package negocio.Armas;
 
-public class ArcoEFlecha implements Arma{
+public class ArcoEFlecha implements Arma {
     protected final int dano;
-    
+    protected final String nome;
 
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -19,20 +18,27 @@ public class ArcoEFlecha implements Arma{
         return true;
     }
 
-
-
-    public ArcoEFlecha()
-    {
-        this.dano=20;        
+    public ArcoEFlecha() {
+        this.dano = 20;
+        this.nome = "Arco e Flecha";
     }
-
-    
 
     @Override
     public int plusDano() {
         return dano;
-        // TODO Auto-generated method stub
-        
+
     }
-    
+
+    @Override
+    public String getNome() {
+
+        return nome;
+    }
+
+    @Override
+    public int getDano() {
+
+        return dano;
+    }
+
 }
